@@ -22,6 +22,10 @@ if (room == rm_scavenge) {
 		array_push(racers_in_race, racers[teams_in_race[i]][racer_1]);
 		array_push(racers_in_race, racers[teams_in_race[i]][racer_2]);
 	}
+	
+	// Prepare scavenging.
+	scavenge_slots = [ noone, noone, noone ];
+	scavenge_active = [ true, true, true ];
 } else if (room == rm_race) {
 	// Lock in player modifications.
 }

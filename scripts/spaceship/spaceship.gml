@@ -1,3 +1,9 @@
+enum Module {
+	ShieldModule,
+	LaserModule,
+	ThrusterModule,
+}
+
 function Spaceship(_team) constructor {
 	team = _team;
 	pilot = noone;

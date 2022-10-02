@@ -1,4 +1,4 @@
-if (owner == other || lifetime < 0.25) {
+if (owner == other || lifetime < 0.3) {
 	exit;
 }
 

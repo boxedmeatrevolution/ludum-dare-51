@@ -10,3 +10,4 @@ shoot_timer_max = 2;
 shoot_timer = 1.5 * shoot_timer_max;
 aim_dir = 0;
 placement = -1;
+image_speed = 0;
