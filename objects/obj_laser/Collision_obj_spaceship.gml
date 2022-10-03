@@ -2,7 +2,7 @@ if (other.dead || lifetime < 0.3) {
 	exit;
 }
 
-if (other.model.team == owner.model.team && other != owner) {
+if (owner.model.team != -1 && other.model.team == owner.model.team && other != owner) {
 	if (ship_has_ability(owner.model, Module.LaserModule, LaserAbility.AllyBoost)) {
 		other.ally_boost = true;
 		other.ally_boost_timer = 2;
