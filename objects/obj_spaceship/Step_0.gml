@@ -100,15 +100,22 @@ if (!dead && active && obj_race_controller.race_started) {
 	
 	shoot_timer -= dt;
 	if (shoot_timer < 0) {
-		shoot_timer = shoot_timer_max;
-		if (ship_has_ability(model, Module.LaserModule, LaserAbility.NoRecoil)) {
-		} else {
-			vel_x -= shoot_impulse * dir_x;
-			vel_y -= shoot_impulse * dir_y;
+		var num_shots = 1;
+		if (ship_has_ability(model, Module.LaserModule, LaserAbility.DoubleShot)) {
+			num_shots *= 2;
 		}
-		var laser = instance_create_layer(x, y, "Lasers", obj_laser);
-		laser.dir = dir;
-		laser.owner = self;
+		shoot_timer = shoot_timer_max;
+		for (var i = 0; i < num_shots; ++i) {
+			var offset = (i + 0.5 - 0.5 * num_shots) * 32;
+			if (ship_has_ability(model, Module.LaserModule, LaserAbility.NoRecoil)) {
+			} else {
+				vel_x -= shoot_impulse * dir_x;
+				vel_y -= shoot_impulse * dir_y;
+			}
+			var laser = instance_create_layer(x + offset * dsin(dir), y - offset * dcos(dir), "Lasers", obj_laser);
+			laser.dir = dir;
+			laser.owner = self;
+		}
 	}
 
 	torque += flywheel * sign(mod_angle(aim_dir - dir));

@@ -4,6 +4,12 @@ function ability_to_string(module, index) {
 		switch (module.abilities[index]) {
 			case LaserAbility.NoRecoil:
 				return "No recoil";
+			case LaserAbility.DoubleShot:
+				return "Double shot";
+			case LaserAbility.HomingShot:
+				return "Homing shot";
+			case LaserAbility.AllyBoost:
+				return "Boost ally on hit";
 		}
 		break;
 	case Module.ShieldModule:

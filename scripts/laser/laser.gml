@@ -1,5 +1,8 @@
 enum LaserAbility {
 	NoRecoil,
+	DoubleShot,
+	HomingShot,
+	AllyBoost,
 }
 
 function Laser(_cost, _rating) constructor {
@@ -14,7 +17,10 @@ function Laser(_cost, _rating) constructor {
 		var num_abilities = choose(0, 1, 1, 1, 2);
 		for (var i = 0; i < num_abilities; ++i) {
 			next_ability = choose(
-				LaserAbility.NoRecoil);
+				LaserAbility.NoRecoil,
+				LaserAbility.DoubleShot,
+				LaserAbility.HomingShot,
+				LaserAbility.AllyBoost);
 			array_push(abilities, next_ability);
 		}
 	}
