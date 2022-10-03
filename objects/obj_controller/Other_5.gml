@@ -1,4 +1,4 @@
-if (room == rm_race || room == rm_init) {
+if (room == rm_race || (room == rm_tutorial && race_index == 0)) {
 	// Give money.
 	for (var i = 0; i < array_length(placement); ++i) {
 		if (placement[i].player_index != -1) {

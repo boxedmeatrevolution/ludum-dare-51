@@ -1,4 +1,5 @@
 num_teams = 3;
+tutorial_index = 0;
 
 scavenge_slots = [ noone, noone, noone ];
 scavenge_active = [ true, true, true ];
@@ -23,5 +24,3 @@ money = 20;
 
 teams_in_race = [];
 racers_in_race = [];
-
-room_goto(rm_scavenge);

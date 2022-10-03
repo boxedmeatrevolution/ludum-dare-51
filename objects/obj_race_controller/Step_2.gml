@@ -35,7 +35,11 @@ if (race_finished) {
 		for (var i = 0; i < min(3, array_length(placement)); ++i) {
 			array_push(obj_controller.placement, placement[i].model);
 		}
-		room_goto(rm_scavenge);
+		if (obj_controller.race_index == 1 || obj_controller.race_index == 2 || obj_controller.race_index == 3 || obj_controller.race_index == 4) {
+			room_goto(rm_tutorial);
+		} else {
+			room_goto(rm_scavenge);
+		}
 	}
 }
 
