@@ -3,6 +3,7 @@ enum LaserAbility {
 	DoubleShot,
 	HomingShot,
 	AllyBoost,
+	LongRange,
 }
 
 function Laser(_cost, _rating) constructor {
