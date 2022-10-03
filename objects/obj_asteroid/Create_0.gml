@@ -1,4 +1,16 @@
+enum AsteroidType {
+	Normal,
+	Large,
+	Icy,
+	Metal,
+	Rubber,
+	Spicy
+};
+
 hp = 1;
+
+model = { team: -1 };
+type = AsteroidType.Normal;
 
 vel_x = 0;
 vel_y = 0;
