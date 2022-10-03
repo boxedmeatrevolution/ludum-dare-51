@@ -17,7 +17,7 @@ function ability_to_string(module, index) {
 			case ShieldAbility.AsteroidPiercer:
 				return "Pierce asteroids";
 			case ShieldAbility.HpRegen:
-				return "HP regen";
+				return "Shield regen";
 			case ShieldAbility.Reflect:
 				return "Reflect lasers";
 			case ShieldAbility.AllyShield:
@@ -28,6 +28,12 @@ function ability_to_string(module, index) {
 		switch (module.abilities[index]) {
 			case ThrusterAbility.StartBoost:
 				return "Boost at race start";
+			case ThrusterAbility.Draft:
+				return "Draft with allies";
+			case ThrusterAbility.Catchup:
+				return "Faster while losing";
+			case ThrusterAbility.Agile:
+				return "Sharper turns";
 		}
 		break;
 	}

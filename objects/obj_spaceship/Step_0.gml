@@ -6,6 +6,17 @@ var shoot_impulse = 30;
 var flywheel = 40;
 var drag_dir = 0.4;
 
+if (ship_has_ability(model, Module.ThrusterModule, ThrusterAbility.Agile)) {
+	flywheel = 70;
+}
+
+if (is_drafting) {
+	thrust += 40;
+}
+if (placement_temp > 2 && ship_has_ability(model, Module.ThrusterModule, ThrusterAbility.Catchup)) {
+	thrust += 25;
+}
+
 animation_timer += dt;
 
 if (!dead && obj_race_controller.race_started && ally != noone && !ally.dead) {
@@ -88,7 +99,7 @@ if (closest_dangerous != noone) {
 if (obj_race_controller.race_started && start_boost_timer < 1.8) {
 	start_boost_timer += dt;
 	if (ship_has_ability(model, Module.ThrusterModule, ThrusterAbility.StartBoost)) {
-		thrust = 245;
+		thrust = max(thrust, 245);
 	}
 }
 if (ally_boost) {
@@ -96,10 +107,27 @@ if (ally_boost) {
 	if (ally_boost_timer < 0) {
 		ally_boost = false;
 	}
-	thrust = 245;
+	thrust = max(thrust, 245);
 }
 
-
+if (ship_has_ability(model, Module.ThrusterModule, ThrusterAbility.Draft)) {
+	if (active && !dead && ally != noone && ally.active && !ally.dead) {
+		var delta_x = ally.x - x;
+		var delta_y = ally.y - y;
+		if (abs(delta_x) > abs(delta_y) && abs(delta_x) < 350) {
+			if (delta_x > 0) {
+				is_drafting = true;
+				ally.is_drafting = false;
+			} else {
+				is_drafting = false;
+				ally.is_drafting = true;
+			}
+		} else {
+			is_drafting = false;
+			ally.is_drafting = false;
+		}
+	}
+}
 
 var accel_x = 0;
 var accel_y = 0;

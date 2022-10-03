@@ -12,11 +12,13 @@ shoot_timer_max = 2;
 shoot_timer = 1.5 * shoot_timer_max;
 aim_dir = 0;
 placement = -1;
+placement_temp = 0;
 image_speed = 0;
 
 start_boost_timer = 0;
 ally_boost = false;
 ally_boost_timer = 0;
+is_drafting = false;
 
 max_regen_time = 7;
 regen_timer = max_regen_time;
