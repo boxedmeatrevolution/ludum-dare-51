@@ -122,6 +122,9 @@ if (!dead && active && obj_race_controller.race_started) {
 			var laser = instance_create_layer(x + offset * dsin(dir), y - offset * dcos(dir), "Lasers", obj_laser);
 			laser.dir = dir;
 			laser.owner = self;
+			if (ship_has_ability(model, Module.LaserModule, LaserAbility.HomingShot)) {
+				laser.has_homing = true;
+			}
 		}
 	}
 
