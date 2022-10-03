@@ -7,6 +7,19 @@ var shoot_impulse = 30;
 var flywheel = 40;
 var drag_dir = 0.4;
 
+animation_timer += dt;
+
+if (hp <= 0 && !dead) {
+	vel_x = 0;
+	vel_y = 0;
+	dead = true;
+	instance_create_layer(x, y, "Explosions", obj_explosion);
+	visible = false;
+	for (var i = 0; i < 10; ++i) {
+		instance_create_layer(x, y, "Asteroids", obj_dust);
+	}
+}
+
 // If any asteroids close, steer away.
 closest_dangerous = noone;
 var closest_dangerous_distance = infinity;
@@ -83,7 +96,7 @@ var torque = 0;
 accel_x -= drag * vel_x;
 accel_y -= drag * vel_y;
 torque -= drag_dir * vel_dir;
-if (active && obj_race_controller.race_started) {
+if (!dead && active && obj_race_controller.race_started) {
 	var dir_x = dcos(dir);
 	var dir_y = dsin(dir);
 	accel_x += dir_x * thrust;

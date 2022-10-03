@@ -1,3 +1,7 @@
+if (dead || other.dead) {
+	exit;
+}
+
 var dt = 1 / 60;
 var delta_x = other.x - x;
 var delta_y = other.y - y;

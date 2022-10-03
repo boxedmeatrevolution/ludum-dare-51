@@ -1,3 +1,7 @@
+if (dead) {
+	exit;
+}
+
 var delta_x = other.x - x;
 var delta_y = other.y - y;
 var distance = sqrt(sqr(delta_x) + sqr(delta_y));

@@ -1,4 +1,4 @@
-if (owner == other || lifetime < 0.3) {
+if (other.dead || other.model.team == owner.model.team || lifetime < 0.3) {
 	exit;
 }
 

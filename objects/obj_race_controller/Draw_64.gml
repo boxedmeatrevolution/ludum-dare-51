@@ -6,6 +6,10 @@ draw_roundrect_ext(origin_x + 32, origin_y + height - 32 - 8, origin_x + width -
 for (var i = 0; i < array_length(racers); ++i) {
 	if (racers[i].placement == -1) {
 		var pos = (racers[i].x - start_line) / (finish_line - start_line);
-		draw_sprite(spr_racer_icon, racers[i].model.team, lerp(origin_x + 32, origin_x + width - 32, pos), origin_y + height - 32 - 4);
+		if (racers[i].dead) {
+			draw_sprite(spr_racer_dead_icon, racers[i].model.team, lerp(origin_x + 32, origin_x + width - 32, pos), origin_y + height - 32 - 4);
+		} else {
+			draw_sprite(spr_racer_icon, racers[i].model.team, lerp(origin_x + 32, origin_x + width - 32, pos), origin_y + height - 32 - 4);
+		}
 	}
 }

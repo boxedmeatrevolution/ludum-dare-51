@@ -1,5 +1,6 @@
 var module = obj_controller.scavenge_slots[slot];
-if (module != noone && obj_controller.scavenge_active[slot]) {
+if (module != noone && obj_controller.scavenge_active[slot] && module.cost <= obj_controller.money) {
+	obj_controller.money -= module.cost;
 	for (var i = 0; i < 5; ++i) {
 		instance_create_layer(mouse_x, mouse_y, "Foreground", obj_gear);
 	}
@@ -32,5 +33,16 @@ if (module != noone && obj_controller.scavenge_active[slot]) {
 		}
 	}
 	obj_controller.scavenge_slots[slot] = noone;
-	obj_controller.scavenge_active[slot] = noone;
+	obj_controller.scavenge_active[slot] = false;
+
+	var any_active = false;
+	for (var i = 0; i < 3; ++i) {
+		if (obj_controller.scavenge_active[i]) {
+			any_active = true;
+		}
+	}
+	if (!any_active) {
+		obj_scavenge_timer.sprite_index = spr_scavenge_timer_start_race;
+		obj_scavenge_timer.image_speed = 1;
+	}
 }

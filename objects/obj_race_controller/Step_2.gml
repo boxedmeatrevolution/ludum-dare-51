@@ -2,7 +2,11 @@ var dt = 1 / 60;
 
 array_sort(racers, function (racer1, racer2) { return racer1.x - racer2.x });
 
+var all_dead = true;
 for (var i = 0; i < array_length(racers); ++i) {
+	if (!racers[i].dead && racers[i].placement == -1) {
+		all_dead = false;
+	}
 	if (racers[i].placement == -1 && racers[i].x > finish_line) {
 		racers[i].placement = array_length(placement);
 		array_push(placement, racers[i]);
@@ -17,13 +21,20 @@ for (var i = 0; i < array_length(racers); ++i) {
 	}
 }
 
+if (all_dead) {
+	race_finished = true;
+}
+
 if (race_finished) {
 	race_finished_timer -= dt;
+	if (race_finished_timer < 4 && instance_number(obj_indicator_your_medals) == 0) {
+		instance_create_layer(x, y, "Controllers", obj_indicator_your_medals);
+	}
 	if (race_finished_timer < 0) {
-		obj_controller.placement = [ 0, 0, 0 ];
-		obj_controller.placement[0] = placement[0].racer_index;
-		obj_controller.placement[1] = placement[1].racer_index;
-		obj_controller.placement[2] = placement[2].racer_index;
+		obj_controller.placement = [  ];
+		for (var i = 0; i < max(3, array_length(placement)); ++i) {
+			array_push(obj_controller.placement, placement[i].model);
+		}
 		room_goto(rm_scavenge);
 	}
 }

@@ -22,6 +22,8 @@ racers[0][0].equip_standard();
 racers[0][1].equip_standard();
 racers[0][2].equip_standard();
 
+money = 20;
+
 teams_in_race = [];
 racers_in_race = [];
 
