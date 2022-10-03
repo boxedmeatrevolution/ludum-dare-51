@@ -91,6 +91,8 @@ if (ally_boost) {
 	thrust = 245;
 }
 
+
+
 var accel_x = 0;
 var accel_y = 0;
 var torque = 0;
@@ -129,6 +131,14 @@ if (!dead && active && obj_race_controller.race_started) {
 	}
 
 	torque += flywheel * sign(mod_angle(aim_dir - dir));
+	
+	if (ship_has_ability(model, Module.ShieldModule, ShieldAbility.HpRegen) && hp < max_hp) {
+		regen_timer -= dt;
+		if (regen_timer < 0) {
+			regen_timer = max_regen_time;
+			hp += 1;
+		}
+	}
 } else {
 	thrust_effect.thrust_level = 0.0;
 	shoot_timer = 1.5 * shoot_timer_max;
