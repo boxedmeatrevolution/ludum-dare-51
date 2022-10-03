@@ -6,6 +6,10 @@ var shoot_impulse = 30;
 var flywheel = 40;
 var drag_dir = 0.4;
 
+if (ship_has_ability(model, Module.ThrusterModule, ThrusterAbility.Agile)) {
+	flywheel = 70;
+}
+
 if (is_drafting) {
 	thrust += 40;
 }

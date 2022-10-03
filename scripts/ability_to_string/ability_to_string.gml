@@ -30,6 +30,8 @@ function ability_to_string(module, index) {
 				return "Draft with allies";
 			case ThrusterAbility.Catchup:
 				return "Faster while losing";
+			case ThrusterAbility.Agile:
+				return "Sharper turns";
 		}
 		break;
 	}
