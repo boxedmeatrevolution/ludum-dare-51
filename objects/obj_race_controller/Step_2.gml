@@ -18,12 +18,16 @@ for (var i = 0; i < array_length(racers); ++i) {
 		}
 		if (racers[i].placement == 2) {
 			race_finished = true;
+			var sounds = [ snd_race1, snd_race2, snd_race3 ];
+			audio_sound_gain(sounds[obj_controller.race_index % 3], 0, 3000);
 		}
 	}
 }
 
 if (all_dead) {
 	race_finished = true;
+	var sounds = [ snd_race1, snd_race2, snd_race3 ];
+	audio_sound_gain(sounds[obj_controller.race_index % 3], 0, 3000);
 }
 
 if (race_finished) {
