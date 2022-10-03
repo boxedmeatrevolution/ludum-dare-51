@@ -14,6 +14,8 @@ function ability_to_string(module, index) {
 				return "Infinite range";
 			case LaserAbility.Fragment:
 				return "Fragment shot";
+			case LaserAbility.Explode:
+				return "Exploding shot";
 		}
 		break;
 	case Module.ShieldModule:
