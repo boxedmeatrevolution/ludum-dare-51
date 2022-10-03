@@ -1,7 +1,7 @@
 lifetime = 4;
 image_alpha = 0;
 
-var money = 0;
+var money = 5;
 var pl = obj_race_controller.placement;
 player_medals = [];
 for (var i = 0; i < array_length(pl); ++i) {
