@@ -10,6 +10,8 @@ function ability_to_string(module, index) {
 				return "Homing shot";
 			case LaserAbility.AllyBoost:
 				return "Boost ally on hit";
+			case LaserAbility.LongRange:
+				return "Infinite range";
 		}
 		break;
 	case Module.ShieldModule:
