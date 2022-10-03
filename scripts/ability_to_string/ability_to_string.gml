@@ -30,6 +30,8 @@ function ability_to_string(module, index) {
 				return "Share with ally";
 			case ShieldAbility.NoStun:
 				return "No laser hit stun";
+			case ShieldAbility.FuryOfTheFallen:
+				return "Boost near death";
 		}
 		break;
 	case Module.ThrusterModule:
