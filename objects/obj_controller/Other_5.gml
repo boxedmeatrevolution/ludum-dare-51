@@ -11,6 +11,7 @@ if (room == rm_race || room == rm_init) {
 			}
 		}
 	}
+	money += 5;
 	// Choose two teams to race against.
 	var team_1 = irandom_range(1, num_teams - 1);
 	var team_2 = team_1;
