@@ -32,6 +32,8 @@ function ability_to_string(module, index) {
 				return "No laser hit stun";
 			case ShieldAbility.FuryOfTheFallen:
 				return "Boost near death";
+			case ShieldAbility.Repulse:
+				return "Repulse asteroids";
 		}
 		break;
 	case Module.ThrusterModule:
