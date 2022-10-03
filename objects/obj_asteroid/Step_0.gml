@@ -19,3 +19,9 @@ if (bbox_bottom < 0 && vel_y < 0) {
 if (bbox_top > room_height && vel_y > 0) {
 	instance_destroy(self);
 }
+
+
+if (type == AsteroidType.Metal) {
+	dmg = hp / 3 * 205 + 50;
+	image_blend = make_colour_rgb(dmg, dmg, dmg);
+}

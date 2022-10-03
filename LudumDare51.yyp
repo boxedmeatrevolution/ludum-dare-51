@@ -10,6 +10,7 @@
     {"id":{"name":"spr_ring","path":"sprites/spr_ring/spr_ring.yy",},"order":19,},
     {"id":{"name":"spr_indicator_your_team","path":"sprites/spr_indicator_your_team/spr_indicator_your_team.yy",},"order":43,},
     {"id":{"name":"spr_indicator_your_medals","path":"sprites/spr_indicator_your_medals/spr_indicator_your_medals.yy",},"order":44,},
+    {"id":{"name":"asteroid_set_type","path":"scripts/asteroid_set_type/asteroid_set_type.yy",},"order":19,},
     {"id":{"name":"obj_laser","path":"objects/obj_laser/obj_laser.yy",},"order":4,},
     {"id":{"name":"fnt_money","path":"fonts/fnt_money/fnt_money.yy",},"order":1,},
     {"id":{"name":"obj_thrust_ring","path":"objects/obj_thrust_ring/obj_thrust_ring.yy",},"order":16,},
