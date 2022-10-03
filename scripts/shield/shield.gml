@@ -2,14 +2,15 @@ enum ShieldAbility {
 	AsteroidPiercer,
 	HpRegen,
 	Reflect,
-	AllyShield
+	AllyShield,
+	NoStun
 }
 
 function Shield(_cost, _rating) constructor {
 	type = Module.ShieldModule;
 	cost = _cost;
 	rating = _rating;
-	abilities = [ ShieldAbility.AllyShield ];
+	abilities = [ ];
 
 	static fill_random = function() {
 		cost = choose(0, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5);
