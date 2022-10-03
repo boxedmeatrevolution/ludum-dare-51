@@ -18,9 +18,15 @@ if (other.model.team != owner.model.team) {
 	other.vel_y = 30 * delta_y / distance;
 	other.vel_dir += random_range(-20, 20);
 
-	other.hp -= 1;
+	
+	other.hp -= 1
+
+
 	other.active = false;
 	other.active_timer = other.active_timer_max;
+	if (ship_has_ability(other.model, Module.ShieldModule, ShieldAbility.NoStun)) {
+		other.active_timer = other.active_timer_no_stun_max;
+	}
 	var shield = instance_create_layer(other.x, other.y, "Shields", obj_shield);
 	shield.owner = other;
 	

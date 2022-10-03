@@ -8,6 +8,7 @@ vel_dir = 0;
 active = true;
 active_timer = 0;
 active_timer_max = 1;
+active_timer_no_stun_max = 0;
 shoot_timer_max = 2;
 shoot_timer = 1.5 * shoot_timer_max;
 aim_dir = 0;

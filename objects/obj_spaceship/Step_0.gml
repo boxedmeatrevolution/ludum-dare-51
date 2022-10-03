@@ -19,6 +19,14 @@ if (placement_temp > 2 && ship_has_ability(model, Module.ThrusterModule, Thruste
 
 animation_timer += dt;
 
+if (!dead && obj_race_controller.race_started && ally != noone && !ally.dead) {
+	var ally_has_share = ship_has_ability(ally.model, Module.ShieldModule, ShieldAbility.AllyShield);
+	if (ally_has_share && hp <= 0 && ally.hp >= 2) {
+		ally.hp -= 1;
+		hp = 1;
+	}
+}
+
 if (hp <= 0 && !dead) {
 	vel_x = 0;
 	vel_y = 0;

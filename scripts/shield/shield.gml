@@ -1,7 +1,9 @@
 enum ShieldAbility {
 	AsteroidPiercer,
 	HpRegen,
-	Reflect
+	Reflect,
+	AllyShield,
+	NoStun
 }
 
 function Shield(_cost, _rating) constructor {
