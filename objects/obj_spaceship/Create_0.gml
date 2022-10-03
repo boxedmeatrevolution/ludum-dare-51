@@ -1,4 +1,5 @@
 max_hp = 3;
+max_thrust = 160;
 hp = 3
 vel_x = 0;
 vel_y = 0;
@@ -12,6 +13,8 @@ shoot_timer = 1.5 * shoot_timer_max;
 aim_dir = 0;
 placement = -1;
 image_speed = 0;
+
+start_boost_timer = 0;
 
 animation_timer = 0;
 dead = false;

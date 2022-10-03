@@ -1,7 +1,5 @@
 enum ThrusterAbility {
 	StartBoost,
-	LastPlaceBoost,
-	FirstPlaceBoost,
 }
 
 function Thruster(_cost, _rating) constructor {
@@ -16,9 +14,7 @@ function Thruster(_cost, _rating) constructor {
 		var num_abilities = choose(0, 1, 1, 1, 2);
 		for (var i = 0; i < num_abilities; ++i) {
 			next_ability = choose(
-				ThrusterAbility.StartBoost,
-				ThrusterAbility.LastPlaceBoost,
-				ThrusterAbility.FirstPlaceBoost);
+				ThrusterAbility.StartBoost);
 			array_push(abilities, next_ability);
 		}
 	}

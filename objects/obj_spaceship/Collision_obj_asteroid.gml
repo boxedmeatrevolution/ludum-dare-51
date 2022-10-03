@@ -14,8 +14,11 @@ if (other.type == AsteroidType.Rubber) {
 	recoil_vel = 300;
 }
 
-vel_x = -dir_x * recoil_vel;
-vel_y = -dir_y * recoil_vel;
+if (other.hp == 0 && ship_has_ability(model, Module.ShieldModule, ShieldAbility.AsteroidPiercer)) {
+} else {
+	vel_x = -dir_x * recoil_vel;
+	vel_y = -dir_y * recoil_vel;
+}
 vel_dir += random_range(-20, 20);
 
 hp -= 1;

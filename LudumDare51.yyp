@@ -9,6 +9,7 @@
     {"id":{"name":"spaceship_set_model","path":"scripts/spaceship_set_model/spaceship_set_model.yy",},"order":18,},
     {"id":{"name":"spr_ring","path":"sprites/spr_ring/spr_ring.yy",},"order":18,},
     {"id":{"name":"spr_indicator_your_team","path":"sprites/spr_indicator_your_team/spr_indicator_your_team.yy",},"order":42,},
+    {"id":{"name":"ship_has_ability","path":"scripts/ship_has_ability/ship_has_ability.yy",},"order":20,},
     {"id":{"name":"spr_indicator_your_medals","path":"sprites/spr_indicator_your_medals/spr_indicator_your_medals.yy",},"order":43,},
     {"id":{"name":"asteroid_set_type","path":"scripts/asteroid_set_type/asteroid_set_type.yy",},"order":19,},
     {"id":{"name":"obj_laser","path":"objects/obj_laser/obj_laser.yy",},"order":4,},

@@ -1,6 +1,5 @@
 var dt = 1 / 60;
 
-var max_thrust = 160;
 var thrust = max_thrust;
 var drag = 0.8;
 var shoot_impulse = 30;
@@ -33,17 +32,6 @@ with (obj_asteroid) {
 		closest_dangerous_distance = distance;
 	}
 }
-/*
-with (obj_spaceship) {
-	var delta_x = x - other.x;
-	var delta_y = y - other.y;
-	var distance = sqrt(sqr(delta_x) + sqr(delta_y));
-	var is_dangerous = (distance < 300) && (delta_x > 0) && (abs(delta_x) > abs(delta_y));
-	if (distance < closest_dangerous_distance && is_dangerous) {
-		other.closest_dangerous = self;
-		closest_dangerous_distance = distance;
-	}
-}*/
 
 closest_target = noone;
 var closest_target_distance = infinity;
@@ -78,7 +66,7 @@ if (closest_dangerous != noone) {
 		aim_dir = max(mod_angle(dir_to + 40), 0);
 	}
 	if (abs(mod_angle(dir_to - dir)) < 30) {
-		thrust = lerp(0, 0.5 * max_thrust, abs(mod_angle(dir_to - dir)) / 30);
+		thrust = lerp(0, 0.5 * thrust, abs(mod_angle(dir_to - dir)) / 30);
 	}
 } else if (closest_target != noone) {
 	var delta_x = closest_target.x - x;
@@ -87,6 +75,13 @@ if (closest_dangerous != noone) {
 	aim_dir = dir_to;
 } else {
 	aim_dir = 0;
+}
+
+if (obj_race_controller.race_started && start_boost_timer < 1.8) {
+	start_boost_timer += dt;
+	if (ship_has_ability(model, Module.ThrusterModule, ThrusterAbility.StartBoost)) {
+		thrust = 245;
+	}
 }
 
 var accel_x = 0;
@@ -106,8 +101,11 @@ if (!dead && active && obj_race_controller.race_started) {
 	shoot_timer -= dt;
 	if (shoot_timer < 0) {
 		shoot_timer = shoot_timer_max;
-		vel_x -= shoot_impulse * dir_x;
-		vel_y -= shoot_impulse * dir_y;
+		if (ship_has_ability(model, Module.LaserModule, LaserAbility.NoRecoil)) {
+		} else {
+			vel_x -= shoot_impulse * dir_x;
+			vel_y -= shoot_impulse * dir_y;
+		}
 		var laser = instance_create_layer(x, y, "Lasers", obj_laser);
 		laser.dir = dir;
 		laser.owner = self;

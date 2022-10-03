@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "ability_to_string",
+  "name": "ship_has_ability",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {

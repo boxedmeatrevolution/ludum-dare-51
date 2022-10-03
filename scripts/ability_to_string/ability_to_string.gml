@@ -14,12 +14,8 @@ function ability_to_string(module, index) {
 		break;
 	case Module.ThrusterModule:
 		switch (module.abilities[index]) {
-			case ThrusterAbility.FirstPlaceBoost:
-				return "Turbo when in first";
-			case ThrusterAbility.LastPlaceBoost:
-				return "Turbo when in last";
 			case ThrusterAbility.StartBoost:
-				return "Launch at race start";
+				return "Boost at race start";
 		}
 		break;
 	}
