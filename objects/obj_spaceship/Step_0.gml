@@ -121,6 +121,20 @@ if (ship_has_ability(model, Module.ThrusterModule, ThrusterAbility.Draft)) {
 	}
 }
 
+if (thrust / max_thrust > 0.7 && ship_has_ability(model, Module.ThrusterModule, ThrusterAbility.Push)) {
+	with (obj_spaceship) {
+		if (!dead && model.team != other.model.team) {
+			var delta_x = other.x - x;
+			var delta_y = other.y - y;
+			var distance = sqrt(sqr(delta_x) + sqr(delta_y));
+			if (abs(delta_x) > abs(delta_y) && delta_x > 0 && distance < 250) {
+				vel_x -= delta_x / distance * 200 * dt;
+				vel_y -= delta_y / distance * 200 * dt;
+			}
+		}
+	}
+}
+
 var accel_x = 0;
 var accel_y = 0;
 var torque = 0;
