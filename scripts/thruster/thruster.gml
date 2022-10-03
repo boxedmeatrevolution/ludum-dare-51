@@ -1,5 +1,6 @@
 enum ThrusterAbility {
 	StartBoost,
+	Draft,
 }
 
 function Thruster(_cost, _rating) constructor {

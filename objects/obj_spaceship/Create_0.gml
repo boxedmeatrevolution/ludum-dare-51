@@ -17,6 +17,7 @@ image_speed = 0;
 start_boost_timer = 0;
 ally_boost = false;
 ally_boost_timer = 0;
+is_drafting = false;
 
 max_regen_time = 7;
 regen_timer = max_regen_time;
