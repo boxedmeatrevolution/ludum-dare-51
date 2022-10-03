@@ -1,6 +1,8 @@
 var dt = 1 / 60;
 if (obj_controller.race_index == 1) {
 	timer -= 0.4 * dt;
+} else if (obj_controller.race_index == 2) {
+	timer -= 0.8 * dt;
 } else {
 	timer -= dt;
 }

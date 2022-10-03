@@ -66,7 +66,7 @@ if (room == rm_race || (room == rm_tutorial && race_index == 0)) {
 	} else if (race_index == 4) {
 		race_length = 1;
 		environment = [ AsteroidType.Normal, AsteroidType.Icy ];
-	} else if (race_index <= -1) {
+	} else if (race_index <= 6) {
 		race_length = choose(1, 2, 2, 3);
 		var env_count = choose(2, 3);
 		environment = [];
@@ -77,7 +77,7 @@ if (room == rm_race || (room == rm_tutorial && race_index == 0)) {
 		}
 	} else {
 		race_length = choose(1, 2, 2, 3);
-		var env_count = choose(3);
+		var env_count = choose(1, 2, 2, 3);
 		environment = [];
 		for (var i = 0; i < env_count; ++i) {
 			var next = choose(AsteroidType.Normal, AsteroidType.Normal, AsteroidType.Large, AsteroidType.Spicy, AsteroidType.Icy, AsteroidType.Rubber, AsteroidType.Metal);
