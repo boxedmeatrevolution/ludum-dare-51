@@ -4,7 +4,8 @@ enum ShieldAbility {
 	Reflect,
 	AllyShield,
 	NoStun,
-	Repulse,
+	FuryOfTheFallen,
+	Repulse
 }
 
 function Shield(_cost, _rating) constructor {
@@ -12,7 +13,6 @@ function Shield(_cost, _rating) constructor {
 	cost = _cost;
 	rating = _rating;
 	abilities = [];
-
 	static fill_random = function() {
 		cost = choose(0, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5);
 		rating = choose(1, 1, 1, 2, 2, 3);

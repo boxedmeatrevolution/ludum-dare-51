@@ -132,6 +132,13 @@ if (active && !dead && obj_race_controller.race_started && ship_has_ability(mode
 	}
 }
 
+if (active && !dead && obj_race_controller.race_started && ship_has_ability(model, Module.ShieldModule, ShieldAbility.FuryOfTheFallen)) {
+	if (hp == 1) {
+		thrust = max(thrust, 245);
+	}
+}
+
+
 if (active && !dead && obj_race_controller.race_started && ship_has_ability(model, Module.ThrusterModule, ThrusterAbility.EndBoost)) {
 	if (obj_race_controller.finish_line - x < 400) {
 		thrust = max(thrust, 245);
