@@ -30,6 +30,8 @@ function ability_to_string(module, index) {
 				return "Share with ally";
 			case ShieldAbility.NoStun:
 				return "No laser hit stun";
+			case ShieldAbility.Repulse:
+				return "Repulse asteroids";
 		}
 		break;
 	case Module.ThrusterModule:

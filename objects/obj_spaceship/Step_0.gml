@@ -19,6 +19,18 @@ if (placement_temp > 2 && ship_has_ability(model, Module.ThrusterModule, Thruste
 
 animation_timer += dt;
 
+if (ship_has_ability(model, Module.ShieldModule, ShieldAbility.Repulse)) {
+	with (obj_asteroid) {
+		var delta_x = other.x - x;
+		var delta_y = other.y - y;
+		var distance = sqrt(sqr(delta_x) + sqr(delta_y));
+		if (distance < 200) {
+			vel_x -= delta_x / distance * 12 * dt;
+			vel_y -= delta_y / distance * 12 * dt;
+		}
+	}
+}
+
 if (!dead && obj_race_controller.race_started && ally != noone && !ally.dead) {
 	var ally_has_share = ship_has_ability(ally.model, Module.ShieldModule, ShieldAbility.AllyShield);
 	if (ally_has_share && hp <= 0 && ally.hp >= 2) {
