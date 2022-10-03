@@ -101,6 +101,20 @@ if (room == rm_race || (room == rm_tutorial && race_index == 0)) {
 		racers[0][2].equip_standard(1);
 	}
 	
+	if (race_index != 0) {
+		for (var i = 0; i < 8; ++i) {
+			var upgrade_team = irandom_range(1, num_teams - 1);
+			var upgrade_pilot = irandom_range(0, array_length(racers[upgrade_team]) - 1);
+			if (random(1) < 0.333333) {
+				racers[upgrade_team][upgrade_pilot].thruster.fill_random();
+			} else if (random(1) < 0.5) {
+				racers[upgrade_team][upgrade_pilot].shield.fill_random();
+			} else {
+				racers[upgrade_team][upgrade_pilot].laser.fill_random();
+			}
+		}
+	}
+	
 	race_index += 1;
 } else if (room == rm_scavenge) {
 	// Lock in player modifications.
