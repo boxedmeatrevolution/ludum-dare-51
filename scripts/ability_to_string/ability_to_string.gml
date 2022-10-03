@@ -28,6 +28,8 @@ function ability_to_string(module, index) {
 				return "Boost at race start";
 			case ThrusterAbility.Draft:
 				return "Draft with allies";
+			case ThrusterAbility.Catchup:
+				return "Faster while losing";
 		}
 		break;
 	}

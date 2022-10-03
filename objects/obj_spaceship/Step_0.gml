@@ -9,6 +9,9 @@ var drag_dir = 0.4;
 if (is_drafting) {
 	thrust += 40;
 }
+if (placement_temp > 2 && ship_has_ability(model, Module.ThrusterModule, ThrusterAbility.Catchup)) {
+	thrust += 25;
+}
 
 animation_timer += dt;
 

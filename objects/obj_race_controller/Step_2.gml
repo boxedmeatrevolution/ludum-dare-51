@@ -7,6 +7,7 @@ for (var i = 0; i < array_length(racers); ++i) {
 	if (!racers[i].dead && racers[i].placement == -1) {
 		all_dead = false;
 	}
+	racers[i].placement_temp = array_length(racers) - i - 1;
 	if (racers[i].placement == -1 && racers[i].x > finish_line) {
 		racers[i].placement = array_length(placement);
 		array_push(placement, racers[i]);

@@ -12,6 +12,7 @@ shoot_timer_max = 2;
 shoot_timer = 1.5 * shoot_timer_max;
 aim_dir = 0;
 placement = -1;
+placement_temp = 0;
 image_speed = 0;
 
 start_boost_timer = 0;
