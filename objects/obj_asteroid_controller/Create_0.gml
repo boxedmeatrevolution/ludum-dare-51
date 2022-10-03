@@ -9,7 +9,7 @@ var count_per_lane = round(count / lanes);
 for (var i = 0; i < lanes; ++i) {
 	for (var j = 0; j < count_per_lane; ++j) {
 		var asteroid = instance_create_layer(random_range(300, room_width), random_range(i / lanes, (i + 1) / lanes) * room_height, "Asteroids", obj_asteroid);
-		asteroid_set_type(asteroid, AsteroidType.Large);
+		asteroid_set_type(asteroid, AsteroidType.Metal);
 		var dir = random(360);
 		var vel = random_range(vel_min, vel_max);
 		asteroid.vel_x = vel * dcos(dir);
