@@ -1,5 +1,9 @@
 var dt = 1 / 60;
-timer -= dt;
+if (obj_controller.race_index == 1) {
+	timer -= 0.4 * dt;
+} else {
+	timer -= dt;
+}
 if (sprite_index == spr_scavenge_timer) {
 	image_index = floor(timer);
 }
