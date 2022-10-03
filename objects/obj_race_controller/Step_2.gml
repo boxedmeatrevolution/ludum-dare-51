@@ -32,7 +32,7 @@ if (race_finished) {
 	}
 	if (race_finished_timer < 0) {
 		obj_controller.placement = [  ];
-		for (var i = 0; i < max(3, array_length(placement)); ++i) {
+		for (var i = 0; i < min(3, array_length(placement)); ++i) {
 			array_push(obj_controller.placement, placement[i].model);
 		}
 		room_goto(rm_scavenge);

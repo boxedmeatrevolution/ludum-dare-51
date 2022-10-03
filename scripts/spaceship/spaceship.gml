@@ -12,10 +12,10 @@ function Spaceship(_team) constructor {
 	shield = noone;
 	laser = noone;
 	
-	static equip_standard = function() {
+	static equip_standard = function(quality) {
 		pilot = noone;
-		thruster = new Thruster(2, 2);
-		shield = new Shield(2, 2);
-		laser = new Laser(2, 2);
+		thruster = new Thruster(2, quality);
+		shield = new Shield(2, quality);
+		laser = new Laser(2, quality);
 	}
 }

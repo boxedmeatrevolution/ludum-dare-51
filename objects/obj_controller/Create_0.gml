@@ -5,22 +5,19 @@ scavenge_active = [ true, true, true ];
 race_length = 2;
 
 placement = [];
+race_index = 0;
 
 racers = array_create(num_teams, []);
 for (var i = 1; i < num_teams; ++i) {
 	racers[i] = array_create(3, noone);
 	for (var j = 0; j < 3; ++j) {
 		racers[i][j] = new Spaceship(i);
-		racers[i][j].equip_standard();
+		racers[i][j].equip_standard(1);
 	}
 }
-racers[0] = [ new Spaceship(0), new Spaceship(0), new Spaceship(0) ];
+racers[0] = [ new Spaceship(0) ];
 racers[0][0].player_index = 0;
-racers[0][1].player_index = 1;
-racers[0][2].player_index = 2;
-racers[0][0].equip_standard();
-racers[0][1].equip_standard();
-racers[0][2].equip_standard();
+racers[0][0].equip_standard(2);
 
 money = 20;
 

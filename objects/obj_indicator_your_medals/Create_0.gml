@@ -13,5 +13,5 @@ for (var i = 0; i < array_length(pl); ++i) {
 var left = camera_get_view_x(view_camera[0]);
 var right = left + camera_get_view_width(view_camera[0]);
 for (var i = 0; i < money; ++i) {
-	instance_create_layer(random_range(left, right), room_height / 2 + random_range(-128, 128), "Controllers", obj_money);
+	instance_create_layer(random_range(left + 400, right - 400), room_height / 2 + random_range(-128, 128), "Controllers", obj_money);
 }

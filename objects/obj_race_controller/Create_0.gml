@@ -26,7 +26,7 @@ var perm_start = choose(
 	[ 2 * permutation[0], 2 * permutation[1], 2 * permutation[2], 2 * permutation[0] + 1, 2 * permutation[1] + 1, 2 * permutation[2] + 1 ]
 );
 for (var i = 0; i < array_length(obj_controller.racers_in_race); ++i) {
-	racers[i] = instance_create_layer(start_line, (perm_start[i] + 0.5) / array_length(obj_controller.racers_in_race) * room_height, "Racers", obj_spaceship);
+	racers[i] = instance_create_layer(start_line, (perm_start[i] + 0.5) / 6 * room_height, "Racers", obj_spaceship);
 	racers[i].racer_index = i;
 	spaceship_set_model(racers[i], obj_controller.racers_in_race[i]);
 	if (racers[i].model.player_index != -1) {

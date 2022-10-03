@@ -55,6 +55,19 @@ if (room == rm_race || room == rm_init) {
 	// Prepare scavenging.
 	scavenge_slots = [ noone, noone, noone ];
 	scavenge_active = [ true, true, true ];
+	
+	if (race_index == 2) {
+		array_push(racers[0], new Spaceship(0));
+		racers[0][1].player_index = 1;
+		racers[0][1].equip_standard(2);
+	}
+	if (race_index == 4) {
+		array_push(racers[0], new Spaceship(0));
+		racers[0][2].player_index = 2;
+		racers[0][2].equip_standard(1);
+	}
+	
+	race_index += 1;
 } else if (room == rm_scavenge) {
 	// Lock in player modifications.
 	placement = [];
