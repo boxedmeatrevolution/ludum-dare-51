@@ -19,7 +19,9 @@ function ability_to_string(module, index) {
 			case ShieldAbility.HpRegen:
 				return "HP regen";
 			case ShieldAbility.Reflect:
-				return "Reflect lasers"
+				return "Reflect lasers";
+			case ShieldAbility.AllyShield:
+				return "Share with ally";
 		}
 		break;
 	case Module.ThrusterModule:
