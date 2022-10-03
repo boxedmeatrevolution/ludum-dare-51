@@ -15,6 +15,8 @@ placement = -1;
 image_speed = 0;
 
 start_boost_timer = 0;
+ally_boost = false;
+ally_boost_timer = 0;
 
 animation_timer = 0;
 dead = false;

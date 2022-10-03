@@ -83,6 +83,13 @@ if (obj_race_controller.race_started && start_boost_timer < 1.8) {
 		thrust = 245;
 	}
 }
+if (ally_boost) {
+	ally_boost_timer -= dt;
+	if (ally_boost_timer < 0) {
+		ally_boost = false;
+	}
+	thrust = 245;
+}
 
 var accel_x = 0;
 var accel_y = 0;
