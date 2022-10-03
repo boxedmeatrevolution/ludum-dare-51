@@ -1,4 +1,15 @@
 if (room == rm_race || (room == rm_tutorial && race_index == 0)) {
+	// Give new ship.
+	if (race_index == 2) {
+		array_push(racers[0], new Spaceship(0));
+		racers[0][1].player_index = 1;
+		racers[0][1].equip_standard(2);
+	}
+	if (race_index == 4) {
+		array_push(racers[0], new Spaceship(0));
+		racers[0][2].player_index = 2;
+		racers[0][2].equip_standard(1);
+	}
 	// Give money.
 	for (var i = 0; i < array_length(placement); ++i) {
 		if (placement[i].player_index != -1) {
@@ -89,17 +100,6 @@ if (room == rm_race || (room == rm_tutorial && race_index == 0)) {
 	// Prepare scavenging.
 	scavenge_slots = [ noone, noone, noone ];
 	scavenge_active = [ true, true, true ];
-	
-	if (race_index == 2) {
-		array_push(racers[0], new Spaceship(0));
-		racers[0][1].player_index = 1;
-		racers[0][1].equip_standard(2);
-	}
-	if (race_index == 4) {
-		array_push(racers[0], new Spaceship(0));
-		racers[0][2].player_index = 2;
-		racers[0][2].equip_standard(1);
-	}
 	
 	if (race_index != 0) {
 		for (var i = 0; i < 8; ++i) {
