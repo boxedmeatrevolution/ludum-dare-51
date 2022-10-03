@@ -6,6 +6,7 @@ enum Module {
 
 function Spaceship(_team) constructor {
 	team = _team;
+	player_index = -1;
 	pilot = noone;
 	thruster = noone;
 	shield = noone;

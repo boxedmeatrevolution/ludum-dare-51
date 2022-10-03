@@ -1,6 +1,6 @@
-draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
-if (active) {
-	draw_set_color(c_yellow);
-	draw_circle(x, y, 48, true);
-	draw_set_color(c_white);
+if (!active) {
+	draw_sprite(spr_scavenge_spaceship_background, image_index, x, y);
+} else {
+	draw_sprite(spr_scavenge_spaceship_background, 2, x, y);
 }
+draw_sprite_ext(spr_spaceship, index, x, y, 1, 1, 90, c_white, 1);

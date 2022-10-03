@@ -11,4 +11,4 @@ case "Laser":
 	module = model.laser;
 	break;
 }
-draw_module_card(x, y, module);
+draw_module_card(x, y, module, image_index);

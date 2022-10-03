@@ -2,6 +2,7 @@ num_teams = 3;
 
 scavenge_slots = [ noone, noone, noone ];
 scavenge_active = [ true, true, true ];
+race_length = 2;
 
 placement = [];
 
@@ -23,3 +24,5 @@ racers[0][2].equip_standard();
 
 teams_in_race = [];
 racers_in_race = [];
+
+room_goto(rm_scavenge);

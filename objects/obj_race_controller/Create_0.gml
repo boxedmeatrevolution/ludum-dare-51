@@ -1,8 +1,8 @@
-var size = 2;
+var size = obj_controller.race_length;
 room_width = size * 1366;
 
 start_line = 64;
-finish_line = room_width - 96;
+finish_line = room_width - 148;
 
 race_started = false;
 race_started_timer = 3;
