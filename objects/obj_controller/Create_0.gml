@@ -1,6 +1,8 @@
 num_teams = 3;
 tutorial_index = 0;
 
+environment = [AsteroidType.Normal];
+
 scavenge_slots = [ noone, noone, noone ];
 scavenge_active = [ true, true, true ];
 race_length = 2;

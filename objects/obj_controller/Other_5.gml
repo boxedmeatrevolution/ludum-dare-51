@@ -50,9 +50,42 @@ if (room == rm_race || (room == rm_tutorial && race_index == 0)) {
 		array_push(racers_in_race, racers[teams_in_race[i]][racer_2]);
 	}
 	
-	// race type
-	race_length = choose(1, 2, 2, 3);
-	
+	// environment
+	if (race_index == 0) {
+		race_length = 1;
+		environment = [ AsteroidType.Normal ];
+	} else if (race_index == 1) {
+		race_length = 2;
+		environment = [ AsteroidType.Normal ];
+	} else if (race_index == 2) {
+		race_length = 2;
+		environment = [ AsteroidType.Normal, AsteroidType.Large ];
+	} else if (race_index == 3) {
+		race_length = 3;
+		environment = [ AsteroidType.Normal, AsteroidType.Metal ];
+	} else if (race_index == 4) {
+		race_length = 1;
+		environment = [ AsteroidType.Normal, AsteroidType.Icy ];
+	} else if (race_index <= -1) {
+		race_length = choose(1, 2, 2, 3);
+		var env_count = choose(2, 3);
+		environment = [];
+		array_push(environment, AsteroidType.Normal);
+		for (var i = 0; i < env_count - 1; ++i) {
+			var next = choose(AsteroidType.Icy, AsteroidType.Rubber, AsteroidType.Spicy);
+			array_push(environment, next);
+		}
+	} else {
+		race_length = choose(1, 2, 2, 3);
+		var env_count = choose(3);
+		environment = [];
+		for (var i = 0; i < env_count; ++i) {
+			var next = choose(AsteroidType.Normal, AsteroidType.Normal, AsteroidType.Large, AsteroidType.Spicy, AsteroidType.Icy, AsteroidType.Rubber, AsteroidType.Metal);
+			array_push(environment, next);
+		}
+	}
+	array_sort(environment, true);
+
 	// Prepare scavenging.
 	scavenge_slots = [ noone, noone, noone ];
 	scavenge_active = [ true, true, true ];

@@ -8,8 +8,18 @@ if (hp <= 0) {
 			var dy = delta * dsin(theta);
 			instance_create_layer(x+dx, y+dy, "Explosions", obj_explosion);
 		}
-		
-		instance_create_layer(x, y, "Asteroids", obj_damage_collider); 
+		with (obj_asteroid) {
+			var distance = sqr(x - other.x) + sqr(y - other.y);
+			if (distance < sqr(150) && hp > 0) {
+				hp -= 1;
+			}
+		}
+		with (obj_spaceship) {
+			var distance = sqr(x - other.x) + sqr(y - other.y);
+			if (distance < sqr(150) && hp > 0) {
+				hp -= 1;
+			}
+		}
 	}
 	else {
 		instance_create_layer(x, y, "Explosions", obj_explosion);

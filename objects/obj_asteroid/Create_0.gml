@@ -1,10 +1,10 @@
 enum AsteroidType {
-	Normal,
 	Large,
-	Icy,
+	Normal,
 	Metal,
+	Icy,
+	Spicy,
 	Rubber,
-	Spicy
 };
 
 hp = 1;
