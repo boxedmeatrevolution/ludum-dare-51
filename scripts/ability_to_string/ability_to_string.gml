@@ -40,6 +40,8 @@ function ability_to_string(module, index) {
 				return "Faster while losing";
 			case ThrusterAbility.Agile:
 				return "Sharper turns";
+			case ThrusterAbility.EndBoost:
+				return "Boost near finish line";
 			case ThrusterAbility.Push:
 				return "Push enemies away";
 		}
