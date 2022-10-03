@@ -1,4 +1,7 @@
 var size = obj_controller.race_length;
+if (size == 1) {
+	size = 1.4;
+}
 room_width = size * 1366;
 
 start_line = 64;
