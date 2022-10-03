@@ -23,7 +23,7 @@ function asteroid_set_type(asteroid, type){
 		asteroid.sprite_index = spr_asteroid_rubber;
 	}
 	else if (type == AsteroidType.Spicy) {
-		asteroid.hp = 1;
+		asteroid.hp = 2;
 		asteroid.sprite_index = spr_asteroid_spicy;
 	}
 	
