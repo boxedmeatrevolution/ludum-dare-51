@@ -11,3 +11,6 @@ shoot_timer = 1.5 * shoot_timer_max;
 aim_dir = 0;
 placement = -1;
 image_speed = 0;
+
+thrust_effect = instance_create_layer(x, y, "Lasers", obj_thrust);
+thrust_effect.owner = self;

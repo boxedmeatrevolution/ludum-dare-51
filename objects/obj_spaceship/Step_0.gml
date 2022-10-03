@@ -1,6 +1,7 @@
 var dt = 1 / 60;
 
-var thrust = 160;
+var max_thrust = 160;
+var thrust = max_thrust;
 var drag = 0.8;
 var shoot_impulse = 30;
 var flywheel = 40;
@@ -64,7 +65,7 @@ if (closest_dangerous != noone) {
 		aim_dir = max(mod_angle(dir_to + 40), 0);
 	}
 	if (abs(mod_angle(dir_to - dir)) < 30) {
-		thrust = lerp(0, 0.5 * thrust, abs(mod_angle(dir_to - dir)) / 30);
+		thrust = lerp(0, 0.5 * max_thrust, abs(mod_angle(dir_to - dir)) / 30);
 	}
 } else if (closest_target != noone) {
 	var delta_x = closest_target.x - x;
@@ -87,19 +88,21 @@ if (active && obj_race_controller.race_started) {
 	var dir_y = dsin(dir);
 	accel_x += dir_x * thrust;
 	accel_y += dir_y * thrust;
+	thrust_effect.thrust_level = thrust / max_thrust;
 	
 	shoot_timer -= dt;
 	if (shoot_timer < 0) {
 		shoot_timer = shoot_timer_max;
 		vel_x -= shoot_impulse * dir_x;
 		vel_y -= shoot_impulse * dir_y;
-		var laser = instance_create_layer(x, y, layer, obj_laser);
+		var laser = instance_create_layer(x, y, "Lasers", obj_laser);
 		laser.dir = dir;
 		laser.owner = self;
 	}
 
 	torque += flywheel * sign(mod_angle(aim_dir - dir));
 } else {
+	thrust_effect.thrust_level = 0.0;
 	shoot_timer = 1.5 * shoot_timer_max;
 }
 

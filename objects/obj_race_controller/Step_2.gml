@@ -7,7 +7,7 @@ for (var i = 0; i < array_length(racers); ++i) {
 		racers[i].placement = array_length(placement);
 		array_push(placement, racers[i]);
 		if (racers[i].placement <= 2) {
-			var placement_visual = instance_create_layer(finish_line - 32, racers[i].y, "DecorationFront", obj_placement);
+			var placement_visual = instance_create_layer(finish_line - 64, clamp(racers[i].y, 64, room_height - 128), "DecorationFront", obj_placement);
 			placement_visual.placement = racers[i].placement;
 			placement_visual.team = racers[i].model.team;
 		}

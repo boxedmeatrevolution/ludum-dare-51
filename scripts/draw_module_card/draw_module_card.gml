@@ -21,19 +21,19 @@ function draw_module_card(xx, yy, module) {
 			name = "Thruster";
 			break;
 	}
-	draw_sprite(img, 0, xx + 0.5 * width, yy + 0.25 * height);
+	draw_sprite(img, 0, xx, yy - 0.25 * height);
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_center);
-	draw_text(xx + 0.5 * width, yy + 0.55 * height, name);
+	draw_text(xx, yy + 0.05 * height, name);
 	for (var i = 1; i <= 3; ++i) {
-		var star_x = xx + 0.5 * width + 32 * (i - 2);
-		var star_y = yy + 0.7 * height;
+		var star_x = xx + 32 * (i - 2);
+		var star_y = yy + 0.2 * height;
 		draw_sprite(spr_star, module.rating >= i ? 0 : 1, star_x, star_y);
 	}
 	if (array_length(module.abilities) == 0) {
-		draw_text(xx + 0.5 * width, yy + 0.85 * height, "Standard");
+		draw_text(xx, yy + 0.35 * height, "Standard");
 	}
 	for (var i = 0; i < array_length(module.abilities); i += 1) {
-		draw_text(xx + 0.5 * width, yy + 0.85 * height + 0.1 * i * height, ability_to_string(module, i));
+		draw_text(xx, yy + 0.35 * height + 0.1 * i * height, ability_to_string(module, i));
 	}
 }

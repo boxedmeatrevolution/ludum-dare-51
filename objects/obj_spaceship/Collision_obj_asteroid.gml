@@ -12,5 +12,7 @@ vel_dir += random_range(-20, 20);
 hp -= 1;
 active = false;
 active_timer = active_timer_max;
+var shield = instance_create_layer(x, y, "Shields", obj_shield);
+shield.owner = self;
 
 instance_destroy(other);

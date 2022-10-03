@@ -6,17 +6,17 @@
   "preMultiplyAlpha": false,
   "edgeFiltering": false,
   "collisionTolerance": 0,
-  "bbox_left": 9,
-  "bbox_right": 114,
-  "bbox_top": 5,
-  "bbox_bottom": 56,
+  "bbox_left": 77,
+  "bbox_right": 472,
+  "bbox_top": 39,
+  "bbox_bottom": 600,
   "origin": 4,
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
   "swfPrecision": 2.525,
-  "width": 128,
-  "height": 64,
+  "width": 512,
+  "height": 640,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -25,22 +25,22 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"8db74c74-36bb-4508-a969-8e817e922c3c","path":"sprites/spr_race_countdown/spr_race_countdown.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8db74c74-36bb-4508-a969-8e817e922c3c","path":"sprites/spr_race_countdown/spr_race_countdown.yy",},"LayerId":{"name":"3e59b41d-b07a-4a0c-a6cb-63e58520e187","path":"sprites/spr_race_countdown/spr_race_countdown.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_race_countdown","path":"sprites/spr_race_countdown/spr_race_countdown.yy",},"resourceVersion":"1.0","name":"8db74c74-36bb-4508-a969-8e817e922c3c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"15849662-fc70-4fde-be15-9188454c25d4","path":"sprites/spr_race_countdown/spr_race_countdown.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"15849662-fc70-4fde-be15-9188454c25d4","path":"sprites/spr_race_countdown/spr_race_countdown.yy",},"LayerId":{"name":"3e59b41d-b07a-4a0c-a6cb-63e58520e187","path":"sprites/spr_race_countdown/spr_race_countdown.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_race_countdown","path":"sprites/spr_race_countdown/spr_race_countdown.yy",},"resourceVersion":"1.0","name":"15849662-fc70-4fde-be15-9188454c25d4","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"4950a357-5083-44d7-827d-6b7f114966a7","path":"sprites/spr_race_countdown/spr_race_countdown.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4950a357-5083-44d7-827d-6b7f114966a7","path":"sprites/spr_race_countdown/spr_race_countdown.yy",},"LayerId":{"name":"3e59b41d-b07a-4a0c-a6cb-63e58520e187","path":"sprites/spr_race_countdown/spr_race_countdown.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_race_countdown","path":"sprites/spr_race_countdown/spr_race_countdown.yy",},"resourceVersion":"1.0","name":"4950a357-5083-44d7-827d-6b7f114966a7","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"e5321a35-fd49-4026-acb1-6bfdbdab598b","path":"sprites/spr_race_countdown/spr_race_countdown.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"e5321a35-fd49-4026-acb1-6bfdbdab598b","path":"sprites/spr_race_countdown/spr_race_countdown.yy",},"LayerId":{"name":"e26292bc-de94-4767-988c-843706b843b2","path":"sprites/spr_race_countdown/spr_race_countdown.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_race_countdown","path":"sprites/spr_race_countdown/spr_race_countdown.yy",},"resourceVersion":"1.0","name":"e5321a35-fd49-4026-acb1-6bfdbdab598b","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"79ca37f7-cad8-483b-97ab-7fb6891ffc61","path":"sprites/spr_race_countdown/spr_race_countdown.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"79ca37f7-cad8-483b-97ab-7fb6891ffc61","path":"sprites/spr_race_countdown/spr_race_countdown.yy",},"LayerId":{"name":"e26292bc-de94-4767-988c-843706b843b2","path":"sprites/spr_race_countdown/spr_race_countdown.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_race_countdown","path":"sprites/spr_race_countdown/spr_race_countdown.yy",},"resourceVersion":"1.0","name":"79ca37f7-cad8-483b-97ab-7fb6891ffc61","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"4dd11d0e-2167-4002-9433-68926c65553c","path":"sprites/spr_race_countdown/spr_race_countdown.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"4dd11d0e-2167-4002-9433-68926c65553c","path":"sprites/spr_race_countdown/spr_race_countdown.yy",},"LayerId":{"name":"e26292bc-de94-4767-988c-843706b843b2","path":"sprites/spr_race_countdown/spr_race_countdown.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_race_countdown","path":"sprites/spr_race_countdown/spr_race_countdown.yy",},"resourceVersion":"1.0","name":"4dd11d0e-2167-4002-9433-68926c65553c","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"7fd9cb97-30bd-4baf-9b56-1872af3858a9","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8db74c74-36bb-4508-a969-8e817e922c3c","path":"sprites/spr_race_countdown/spr_race_countdown.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"ec7eacc5-7d69-42a0-9b05-1dbd67e6da6b","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"15849662-fc70-4fde-be15-9188454c25d4","path":"sprites/spr_race_countdown/spr_race_countdown.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"0b77171f-7c80-403d-8ce9-31d22e50d3d3","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4950a357-5083-44d7-827d-6b7f114966a7","path":"sprites/spr_race_countdown/spr_race_countdown.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
+            {"id":"b77412f6-f67a-4744-b86a-8fbfbc61bc48","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e5321a35-fd49-4026-acb1-6bfdbdab598b","path":"sprites/spr_race_countdown/spr_race_countdown.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
+            {"id":"1346a6c5-affe-4045-bf33-354ac8573657","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"79ca37f7-cad8-483b-97ab-7fb6891ffc61","path":"sprites/spr_race_countdown/spr_race_countdown.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
+            {"id":"bedc5631-208b-4607-9b32-5d0151dc239a","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4dd11d0e-2167-4002-9433-68926c65553c","path":"sprites/spr_race_countdown/spr_race_countdown.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -63,8 +63,8 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 64,
-    "yorigin": 32,
+    "xorigin": 256,
+    "yorigin": 320,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"spr_race_countdown","path":"sprites/spr_race_countdown/spr_race_countdown.yy",},
@@ -74,7 +74,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"3e59b41d-b07a-4a0c-a6cb-63e58520e187","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"e26292bc-de94-4767-988c-843706b843b2","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
