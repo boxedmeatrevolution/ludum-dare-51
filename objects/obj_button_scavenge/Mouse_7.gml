@@ -2,6 +2,7 @@ image_index = 0;
 for (var i = 0; i < 10; ++i) {
 	instance_create_layer(mouse_x, mouse_y, "Foreground", obj_gear);
 }
+clicked = true;
 for (var i = 0; i < 3; ++i) {
 	var next_type = choose(Module.LaserModule, Module.ShieldModule, Module.ThrusterModule);
 	var module = noone;

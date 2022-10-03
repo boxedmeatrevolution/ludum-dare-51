@@ -1,12 +1,12 @@
 vel_min = 5;
 vel_max = 20;
 
-densities[AsteroidType.Normal] = 25 / (1366 * 768);
+densities[AsteroidType.Normal] = 20 / (1366 * 768);
 densities[AsteroidType.Metal] = 10 / (1366 * 768);
-densities[AsteroidType.Large] = 17 / (1366 * 768);
-densities[AsteroidType.Icy] = 17 / (1366 * 768);
-densities[AsteroidType.Spicy] = 17 / (1366 * 768);
-densities[AsteroidType.Rubber] = 25 / (1366 * 768);
+densities[AsteroidType.Large] = 12 / (1366 * 768);
+densities[AsteroidType.Icy] = 14 / (1366 * 768);
+densities[AsteroidType.Spicy] = 14 / (1366 * 768);
+densities[AsteroidType.Rubber] = 20 / (1366 * 768);
 
 for (var n = 0; n < array_length(obj_controller.environment); ++n) {
 	var room_area = (room_width - 300) * room_height;
