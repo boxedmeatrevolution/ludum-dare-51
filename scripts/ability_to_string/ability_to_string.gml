@@ -48,6 +48,8 @@ function ability_to_string(module, index) {
 				return "Boost near finish line";
 			case ThrusterAbility.Push:
 				return "Push enemies away";
+			case ThrusterAbility.EnemyBoost:
+				return "Boost near enemies";
 		}
 		break;
 	}

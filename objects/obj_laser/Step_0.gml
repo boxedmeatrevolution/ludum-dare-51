@@ -2,7 +2,7 @@ var dt = 1 / 60;
 var vel = 500;
 
 if (has_homing) {
-	if (homing_target == noone || !instance_exists(homing_target) || homing_target.x < x) {
+	if (homing_target == noone) {
 		var nearest_dist = infinity;
 		with (obj_asteroid) {
 			var delta_x = x - other.x;
@@ -34,13 +34,9 @@ x += vel * dcos(dir) * dt;
 y += vel * dsin(dir) * dt;
 image_angle = -dir;
 lifetime += dt;
-if (lifetime > 1.1) {
-	if (owner.model.team != -1 && ship_has_ability(owner.model, Module.LaserModule, LaserAbility.LongRange)) {
-		lifetime = -100;
-	} else {
-		image_alpha = lerp(1.0, 0.0, (lifetime - 1.1) / 0.2);
-	}
-}
 if (lifetime > 1.3) {
+	image_alpha = lerp(1.0, 0.0, (lifetime - 1.3) / 0.2);
+}
+if (lifetime > 1.5) {
 	instance_destroy(self);
 }

@@ -4,14 +4,15 @@ enum ThrusterAbility {
 	Catchup,
 	Agile,
 	Push,
-	EndBoost
+	EndBoost,
+	EnemyBoost
 }
 
 function Thruster(_cost, _rating) constructor {
 	type = Module.ThrusterModule;
 	cost = _cost;
 	rating = _rating;
-	abilities = [ThrusterAbility.EndBoost];
+	abilities = [];
 	
 	static fill_random = function() {
 		cost = choose(0, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5);
