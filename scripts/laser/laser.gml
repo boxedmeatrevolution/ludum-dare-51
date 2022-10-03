@@ -23,8 +23,16 @@ function Laser(_cost, _rating) constructor {
 				LaserAbility.NoRecoil,
 				LaserAbility.DoubleShot,
 				LaserAbility.HomingShot,
-				LaserAbility.AllyBoost);
+				LaserAbility.AllyBoost,
+				LaserAbility.LongRange,
+				LaserAbility.Fragment,
+				LaserAbility.Explode);
 			array_push(abilities, next_ability);
+		}
+		if (num_abilities == 2) {
+			if (abilities[0] == abilities[1]) {
+				array_pop(abilities);
+			}
 		}
 	}
 }

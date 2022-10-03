@@ -19,8 +19,19 @@ function Shield(_cost, _rating) constructor {
 		var num_abilities = choose(0, 1, 1, 1, 2);
 		for (var i = 0; i < num_abilities; ++i) {
 			next_ability = choose(
-				ShieldAbility.AsteroidPiercer);
+				ShieldAbility.AsteroidPiercer,
+				ShieldAbility.HpRegen,
+				ShieldAbility.Reflect,
+				ShieldAbility.AllyShield,
+				ShieldAbility.NoStun,
+				ShieldAbility.FuryOfTheFallen,
+				ShieldAbility.Repulse);
 			array_push(abilities, next_ability);
+		}
+		if (num_abilities == 2) {
+			if (abilities[0] == abilities[1]) {
+				array_pop(abilities);
+			}
 		}
 	}
 }
