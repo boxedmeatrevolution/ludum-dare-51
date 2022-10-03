@@ -23,5 +23,8 @@ if (bbox_top > room_height && vel_y > 0) {
 
 if (type == AsteroidType.Metal) {
 	dmg = hp / 3 * 205 + 50;
-	image_blend = make_colour_rgb(dmg, dmg, dmg);
+	image_blend = make_color_rgb(dmg, dmg, dmg);
+}
+if (type == AsteroidType.Spicy && hp == 1) {
+	image_blend = make_color_rgb(184, 69, 61);
 }

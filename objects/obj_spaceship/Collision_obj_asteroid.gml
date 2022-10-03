@@ -19,4 +19,5 @@ active_timer = active_timer_max;
 var shield = instance_create_layer(x, y, "Shields", obj_shield);
 shield.owner = self;
 
+other.hp = 0;
 instance_destroy(other);
