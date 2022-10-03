@@ -21,6 +21,9 @@ ally_boost = false;
 ally_boost_timer = 0;
 is_drafting = false;
 
+collision_boost_timer = 0;
+collision_boost_timer_max = 1;
+
 max_regen_time = 7;
 regen_timer = max_regen_time;
 

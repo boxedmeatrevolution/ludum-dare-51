@@ -110,6 +110,16 @@ if (ally_boost) {
 	thrust = max(thrust, 245);
 }
 
+if (active && !dead && obj_race_controller.race_started && ship_has_ability(model, Module.ThrusterModule, ThrusterAbility.EnemyBoost)) {
+	collision_boost_timer -= dt;
+	if (collision_boost_timer >= 0) {
+		thrust = max(thrust, 245);
+	}
+	else {
+		collision_boost_timer = -1;
+	}
+}
+
 if (active && !dead && obj_race_controller.race_started && ship_has_ability(model, Module.ThrusterModule, ThrusterAbility.EndBoost)) {
 	if (obj_race_controller.finish_line - x < 400) {
 		thrust = max(thrust, 245);

@@ -23,3 +23,7 @@ if (distance != 0) {
 	other.active = false;
 	other.active_timer = active_timer_max;*/
 }
+
+if (active && other.model.team != model.team && ship_has_ability(model, Module.ThrusterModule, ThrusterAbility.EnemyBoost)) {
+	collision_boost_timer = collision_boost_timer_max;
+}
