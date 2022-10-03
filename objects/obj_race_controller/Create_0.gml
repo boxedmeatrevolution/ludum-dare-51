@@ -44,3 +44,11 @@ for (var i = 0; i < array_length(obj_controller.racers_in_race); ++i) {
 		racers[i].image_index = racers[i].model.team - 1;
 	}
 }
+
+with (obj_spaceship) {
+	with (obj_spaceship) {
+		if (other != self && other.model.team == self.model.team) {
+			ally = other;
+		}
+	}
+}
