@@ -26,3 +26,5 @@ dead = false;
 
 thrust_effect = instance_create_layer(x, y, "Lasers", obj_thrust);
 thrust_effect.owner = self;
+
+ally = noone;
