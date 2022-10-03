@@ -4,6 +4,8 @@ enum LaserAbility {
 	HomingShot,
 	AllyBoost,
 	LongRange,
+	Fragment,
+	Explode,
 }
 
 function Laser(_cost, _rating) constructor {
