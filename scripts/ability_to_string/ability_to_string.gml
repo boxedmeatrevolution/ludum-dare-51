@@ -16,6 +16,8 @@ function ability_to_string(module, index) {
 		switch (module.abilities[index]) {
 			case ShieldAbility.AsteroidPiercer:
 				return "Pierce asteroids";
+			case ShieldAbility.HpRegen:
+				return "HP regen";
 		}
 		break;
 	case Module.ThrusterModule:

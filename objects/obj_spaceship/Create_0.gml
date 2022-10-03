@@ -18,6 +18,9 @@ start_boost_timer = 0;
 ally_boost = false;
 ally_boost_timer = 0;
 
+max_regen_time = 7;
+regen_timer = max_regen_time;
+
 animation_timer = 0;
 dead = false;
 
