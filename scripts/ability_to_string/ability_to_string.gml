@@ -18,6 +18,8 @@ function ability_to_string(module, index) {
 				return "Pierce asteroids";
 			case ShieldAbility.HpRegen:
 				return "Shield regen";
+			case ShieldAbility.Reflect:
+				return "Reflect lasers"
 		}
 		break;
 	case Module.ThrusterModule:

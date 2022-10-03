@@ -23,6 +23,12 @@ if (other.model.team != owner.model.team) {
 	other.active_timer = other.active_timer_max;
 	var shield = instance_create_layer(other.x, other.y, "Shields", obj_shield);
 	shield.owner = other;
+	
+	if (ship_has_ability(other.model, Module.ShieldModule, ShieldAbility.Reflect)) {
+		var laser = instance_create_layer(x, y, "Lasers", obj_laser);
+		laser.dir = random_range(90, 270);
+		laser.owner = other;
+	}
 
 	instance_destroy(self);
 }
