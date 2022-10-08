@@ -1,3 +1,2 @@
-if (sprite_index == spr_scavenge_timer_start_race) {
-	room_goto(rm_race);
-}
+should_be_pressed_on_hover = true;
+is_pressed = true;
