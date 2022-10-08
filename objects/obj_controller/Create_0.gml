@@ -22,7 +22,5 @@ racers[0] = [ new Spaceship(0) ];
 racers[0][0].player_index = 0;
 racers[0][0].equip_standard(2);
 
-money = 20;
-
 teams_in_race = [];
 racers_in_race = [];

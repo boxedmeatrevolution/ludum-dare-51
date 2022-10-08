@@ -63,7 +63,6 @@
     {"id":{"name":"spr_placement","path":"sprites/spr_placement/spr_placement.yy",},"order":6,},
     {"id":{"name":"spr_asteroid_large","path":"sprites/spr_asteroid_large/spr_asteroid_large.yy",},"order":30,},
     {"id":{"name":"spr_label_race_length","path":"sprites/spr_label_race_length/spr_label_race_length.yy",},"order":31,},
-    {"id":{"name":"obj_money_counter","path":"objects/obj_money_counter/obj_money_counter.yy",},"order":29,},
     {"id":{"name":"obj_module_slot","path":"objects/obj_module_slot/obj_module_slot.yy",},"order":11,},
     {"id":{"name":"obj_spaceship","path":"objects/obj_spaceship/obj_spaceship.yy",},"order":0,},
     {"id":{"name":"rm_scavenge","path":"rooms/rm_scavenge/rm_scavenge.yy",},"order":2,},

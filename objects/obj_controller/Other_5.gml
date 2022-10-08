@@ -10,19 +10,6 @@ if (room == rm_race || (room == rm_tutorial && race_index == 0)) {
 		racers[0][2].player_index = 2;
 		racers[0][2].equip_standard(1);
 	}
-	// Give money.
-	for (var i = 0; i < array_length(placement); ++i) {
-		if (placement[i].player_index != -1) {
-			if (i == 0) {
-				money += 20;
-			} else if (i == 1) {
-				money += 10;
-			} else if (i == 2) {
-				money += 5;
-			}
-		}
-	}
-	money += 5;
 	// Choose two teams to race against.
 	var team_1 = irandom_range(1, num_teams - 1);
 	var team_2 = team_1;
