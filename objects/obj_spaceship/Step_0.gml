@@ -77,6 +77,9 @@ with (obj_asteroid) {
 	}
 }
 with (obj_spaceship) {
+	if (dead) {
+		continue;
+	}
 	var delta_x = x - other.x;
 	var delta_y = y - other.y;
 	var distance = sqrt(sqr(delta_x) + sqr(delta_y));
@@ -145,8 +148,8 @@ if (active && !dead && obj_race_controller.race_started && ship_has_ability(mode
 	}
 }
 
-if (ship_has_ability(model, Module.ThrusterModule, ThrusterAbility.Draft)) {
-	if (active && !dead && ally != noone && ally.active && !ally.dead) {
+if (active && !dead && ship_has_ability(model, Module.ThrusterModule, ThrusterAbility.Draft)) {
+	if (ally != noone && ally.active && !ally.dead) {
 		var delta_x = ally.x - x;
 		var delta_y = ally.y - y;
 		if (abs(delta_x) > abs(delta_y) && abs(delta_x) < 350) {
@@ -164,7 +167,7 @@ if (ship_has_ability(model, Module.ThrusterModule, ThrusterAbility.Draft)) {
 	}
 }
 
-if (thrust / max_thrust > 0.7 && ship_has_ability(model, Module.ThrusterModule, ThrusterAbility.Push)) {
+if (active && !dead && thrust / max_thrust > 0.7 && ship_has_ability(model, Module.ThrusterModule, ThrusterAbility.Push)) {
 	with (obj_spaceship) {
 		if (!dead && model.team != other.model.team) {
 			var delta_x = other.x - x;
@@ -185,7 +188,7 @@ var torque = 0;
 accel_x -= drag * vel_x;
 accel_y -= drag * vel_y;
 torque -= drag_dir * vel_dir;
-if (!dead && active && obj_race_controller.race_started) {
+if (active && !dead && obj_race_controller.race_started) {
 	var dir_x = dcos(dir);
 	var dir_y = dsin(dir);
 	accel_x += dir_x * thrust;
