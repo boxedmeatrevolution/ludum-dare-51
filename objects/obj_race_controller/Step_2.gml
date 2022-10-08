@@ -8,7 +8,7 @@ for (var i = 0; i < array_length(racers); ++i) {
 		all_dead = false;
 	}
 	racers[i].placement_temp = array_length(racers) - i - 1;
-	if (racers[i].placement == -1 && racers[i].x > finish_line) {
+	if (!racers[i].dead && racers[i].placement == -1 && racers[i].x > finish_line) {
 		racers[i].placement = array_length(placement);
 		array_push(placement, racers[i]);
 		if (racers[i].placement <= 2) {
@@ -31,11 +31,22 @@ if (all_dead) {
 }
 
 if (race_finished) {
-	race_finished_timer -= dt;
-	if (race_finished_timer < 4 && instance_number(obj_indicator_your_medals) == 0) {
-		instance_create_layer(x, y, "Controllers", obj_indicator_your_medals);
-	}
-	if (race_finished_timer < 0) {
+	if (race_finished_phase == 0) {
+		race_finished_timer -= dt;
+		if (race_finished_timer < 0) {
+			race_finished_phase = 1;
+			instance_create_layer(x, y, "Controllers", obj_indicator_your_medals);
+		}
+	} else if (race_finished_phase == 1) {
+		if (!instance_exists(obj_indicator_your_medals)) {
+			race_finished_phase = 2;
+			instance_create_layer(x, y, "Controllers", obj_indicator_ships_lost);
+		}
+	} else if (race_finished_phase == 2) {
+		if (!instance_exists(obj_indicator_ships_lost)) {
+			race_finished_phase = 3;
+		}
+	} else if (race_finished_phase == 3) {
 		obj_controller.placement = [  ];
 		for (var i = 0; i < min(3, array_length(placement)); ++i) {
 			array_push(obj_controller.placement, placement[i].model);

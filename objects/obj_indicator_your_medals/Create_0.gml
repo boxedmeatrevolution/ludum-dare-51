@@ -1,10 +1,11 @@
-lifetime = 4;
+lifetime_max = 1000000;
+lifetime = lifetime_max;
 image_alpha = 0;
 
-var money = 5;
+var money = 0;
 var pl = obj_race_controller.placement;
 player_medals = [];
-for (var i = 0; i < array_length(pl); ++i) {
+for (var i = 0; i < min(3, array_length(pl)); ++i) {
 	if (pl[i].model.player_index != -1) {
 		array_push(player_medals, i);
 		money += (i == 0 ? 20 : (i == 1 ? 10 : (i == 2 ? 5 : 0)));

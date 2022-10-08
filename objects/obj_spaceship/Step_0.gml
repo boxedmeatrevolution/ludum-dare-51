@@ -45,8 +45,13 @@ if (hp <= 0 && !dead) {
 	dead = true;
 	// Lose modules on death
 	if (model.team == 0 && placement == -1) {
-		obj_controller.racers_in_race[racer_index].shield = new Shield(1, 1);
+		ship_lost = true;
+		ship_lost_modules = [
+			obj_controller.racers_in_race[racer_index].thruster,
+			obj_controller.racers_in_race[racer_index].shield,
+			obj_controller.racers_in_race[racer_index].laser ];
 		obj_controller.racers_in_race[racer_index].thruster = new Thruster(1, 1);
+		obj_controller.racers_in_race[racer_index].shield = new Shield(1, 1);
 		obj_controller.racers_in_race[racer_index].laser = new Laser(1, 1);
 	}
 	instance_create_layer(x, y, "Explosions", obj_explosion);

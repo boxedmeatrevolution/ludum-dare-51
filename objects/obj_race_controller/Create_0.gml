@@ -11,7 +11,12 @@ race_started = false;
 race_started_timer = 3;
 
 race_finished = false;
-race_finished_timer = 5;
+race_finished_timer = 1;
+// Phase 0, waiting for a second
+// Phase 1, showing medals
+// Phase 2, showing ships lost
+// Phase 3, dialogue
+race_finished_phase = 0;
 
 instance_create_layer(0, 0, "DecorationFront", obj_race_countdown);
 instance_create_layer(finish_line, 0, "DecorationBack", obj_finish_line);
