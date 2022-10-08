@@ -1,7 +1,7 @@
 {
   "resourceType": "GMProject",
   "resourceVersion": "1.6",
-  "name": "LudumDare51",
+  "name": "JunkyardSpaceRace",
   "resources": [
     {"id":{"name":"spr_module_card","path":"sprites/spr_module_card/spr_module_card.yy",},"order":11,},
     {"id":{"name":"spr_scavenge_timer","path":"sprites/spr_scavenge_timer/spr_scavenge_timer.yy",},"order":41,},

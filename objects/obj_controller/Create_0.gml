@@ -1,4 +1,4 @@
-num_teams = 8;
+num_teams = 7;
 tutorial_index = 0;
 
 environment = [AsteroidType.Normal];
