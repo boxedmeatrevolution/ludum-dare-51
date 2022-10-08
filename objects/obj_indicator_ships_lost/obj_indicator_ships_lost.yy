@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_indicator_your_medals",
+  "name": "obj_indicator_ships_lost",
   "spriteId": {
-    "name": "spr_indicator_your_medals",
-    "path": "sprites/spr_indicator_your_medals/spr_indicator_your_medals.yy",
+    "name": "spr_indicator_ships_lost",
+    "path": "sprites/spr_indicator_ships_lost/spr_indicator_ships_lost.yy",
   },
   "solid": false,
   "visible": true,

@@ -21,6 +21,9 @@ ally_boost = false;
 ally_boost_timer = 0;
 is_drafting = false;
 
+ship_lost = false;
+ship_lost_modules = [];
+
 collision_boost_timer = 0;
 collision_boost_timer_max = 1;
 
