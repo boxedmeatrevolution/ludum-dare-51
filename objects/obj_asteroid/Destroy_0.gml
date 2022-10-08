@@ -8,18 +8,9 @@ if (hp <= 0) {
 			var dy = delta * dsin(theta);
 			instance_create_layer(x+dx, y+dy, "Explosions", obj_explosion);
 		}
-		with (obj_asteroid) {
-			var distance = sqr(x - other.x) + sqr(y - other.y);
-			if (distance < sqr(150) && hp > 0) {
-				hp -= 1;
-			}
-		}
-		with (obj_spaceship) {
-			var distance = sqr(x - other.x) + sqr(y - other.y);
-			if (distance < sqr(150) && hp > 0) {
-				hp -= 1;
-			}
-		}
+		var hitbox = instance_create_layer(x, y, "Explosions", obj_explosion_hitbox);
+		hitbox.image_xscale = 150 / 32;
+		hitbox.image_yscale = 150 / 32;
 	}
 	else {
 		instance_create_layer(x, y, "Explosions", obj_explosion);
