@@ -60,6 +60,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_1B5929A5","properties":[
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"index","path":"objects/obj_ship_select/obj_ship_select.yy",},"objectId":{"name":"obj_ship_select","path":"objects/obj_ship_select/obj_ship_select.yy",},"value":"2",},
           ],"isDnd":false,"objectId":{"name":"obj_ship_select","path":"objects/obj_ship_select/obj_ship_select.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":320.0,"y":672.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4E1E32A6","properties":[],"isDnd":false,"objectId":{"name":"obj_character_speech","path":"objects/obj_character_speech/obj_character_speech.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":-256.0,"y":480.0,},
       ],"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","spriteId":{"name":"spr_background_scavenge","path":"sprites/spr_background_scavenge/spr_background_scavenge.yy",},"colour":4294967295,"x":0,"y":0,"htiled":false,"vtiled":false,"hspeed":0.0,"vspeed":0.0,"stretch":false,"animationFPS":30.0,"animationSpeedType":0,"userdefinedAnimFPS":false,"visible":true,"depth":200,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
   ],
@@ -87,6 +88,7 @@
     {"name":"inst_4FCC75D6","path":"rooms/rm_scavenge/rm_scavenge.yy",},
     {"name":"inst_31A6846F","path":"rooms/rm_scavenge/rm_scavenge.yy",},
     {"name":"inst_1B5929A5","path":"rooms/rm_scavenge/rm_scavenge.yy",},
+    {"name":"inst_4E1E32A6","path":"rooms/rm_scavenge/rm_scavenge.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
