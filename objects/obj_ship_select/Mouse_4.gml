@@ -1,3 +1,7 @@
+if (instance_exists(obj_character_speech)) {
+	exit;
+}
+
 var unused = 0 + 1 + 2;
 unused -= obj_controller.racers_in_race[0].player_index;
 unused -= obj_controller.racers_in_race[1].player_index;

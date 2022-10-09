@@ -57,3 +57,9 @@ with (obj_spaceship) {
 		}
 	}
 }
+
+var talker = instance_create_layer(x, y, "Controllers", obj_character_speech);
+talker.dialogue = [
+	"Now I'm here for some pre-race dialogue",
+	"Hope your ships do well!"
+];

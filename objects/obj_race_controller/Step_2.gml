@@ -51,15 +51,25 @@ if (race_finished) {
 		for (var i = 0; i < min(3, array_length(placement)); ++i) {
 			array_push(obj_controller.placement, placement[i].model);
 		}
-		if (obj_controller.race_index == 1 || obj_controller.race_index == 2 || obj_controller.race_index == 3 || obj_controller.race_index == 4) {
-			room_goto(rm_tutorial);
-		} else {
-			room_goto(rm_scavenge);
+		race_finished_phase = 4;
+		var talker = instance_create_layer(x, y, "Controllers", obj_character_speech);
+		talker.dialogue = [
+			"The race is all done.",
+			"Maybe your ships got all smashed up!",
+			"That would be too bad, wouldn't it?"
+		];
+	} else if (race_finished_phase == 4) {
+		if (!instance_exists(obj_character_speech)) {
+			if (obj_controller.race_index == 1 || obj_controller.race_index == 2 || obj_controller.race_index == 3 || obj_controller.race_index == 4) {
+				room_goto(rm_tutorial);
+			} else {
+				room_goto(rm_scavenge);
+			}
 		}
 	}
 }
 
-if (!race_started) {
+if (!race_started && !instance_exists(obj_character_speech)) {
 	race_started_timer -= dt;
 	if (race_started_timer < 0) {
 		race_started = true;
