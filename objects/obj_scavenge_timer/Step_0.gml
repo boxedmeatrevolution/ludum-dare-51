@@ -15,7 +15,13 @@ if (is_countdown) {
 }
 
 // Logic
-if (no_active_scavenge) {
+if (!obj_button_scavenge.clicked) {
+	// Disabled button (force player to scavenge once)
+	sprite_index = spr_scavenge_timer;
+	image_index = 0;
+	image_speed = 0;
+}
+else if (no_active_scavenge) {
 	// Show "Race" button, blinking
 	sprite_index = spr_scavenge_timer_start_race;
 	image_speed = 1;
@@ -26,7 +32,7 @@ else if (is_pressed) {
 	image_index = 0;
 	image_speed = 0;
 }
-else if (is_hover || !is_countdown) {
+else if (is_hovered || !is_countdown) {
 	// Show "Race" button, no blinking, unpressed
 	sprite_index = spr_scavenge_timer_start_race;
 	image_index = 1;
