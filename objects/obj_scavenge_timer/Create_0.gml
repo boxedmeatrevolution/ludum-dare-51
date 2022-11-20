@@ -1,4 +1,4 @@
 event_inherited();
 
-timer = 11;
+timer = 33;
 image_speed = 0;
