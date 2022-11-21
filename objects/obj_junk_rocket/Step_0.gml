@@ -4,7 +4,7 @@ timer += dt;
 
 var target_y = mouse_y;
 var t = timer / 10;
-var target_x = camera_get_view_width(view_camera[0]) * lerp(t, t * t, 0.5) + camera_get_view_x(view_camera[0]);
+var target_x = camera_get_view_width(view_camera[0]) * lerp(t, t * t, 0.3) + camera_get_view_x(view_camera[0]);
 
 if (x > camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0])) {
 	instance_destroy(self);

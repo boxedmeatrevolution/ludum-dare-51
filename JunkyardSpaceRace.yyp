@@ -34,6 +34,7 @@
     {"id":{"name":"obj_thrust","path":"objects/obj_thrust/obj_thrust.yy",},"order":15,},
     {"id":{"name":"obj_upcoming_card","path":"objects/obj_upcoming_card/obj_upcoming_card.yy",},"order":27,},
     {"id":{"name":"spr_laser_explode","path":"sprites/spr_laser_explode/spr_laser_explode.yy",},"order":16,},
+    {"id":{"name":"obj_junk_rocket_controller","path":"objects/obj_junk_rocket_controller/obj_junk_rocket_controller.yy",},"order":39,},
     {"id":{"name":"obj_dust","path":"objects/obj_dust/obj_dust.yy",},"order":18,},
     {"id":{"name":"obj_explosion","path":"objects/obj_explosion/obj_explosion.yy",},"order":17,},
     {"id":{"name":"spr_shield","path":"sprites/spr_shield/spr_shield.yy",},"order":9,},

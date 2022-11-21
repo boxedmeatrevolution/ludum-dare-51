@@ -19,6 +19,7 @@
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Controllers","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5E526BC4","properties":[],"isDnd":false,"objectId":{"name":"obj_asteroid_controller","path":"objects/obj_asteroid_controller/obj_asteroid_controller.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":-32.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5F61F2C6","properties":[],"isDnd":false,"objectId":{"name":"obj_race_controller","path":"objects/obj_race_controller/obj_race_controller.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":32.0,"y":-32.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_1A33B5B2","properties":[],"isDnd":false,"objectId":{"name":"obj_junk_rocket_controller","path":"objects/obj_junk_rocket_controller/obj_junk_rocket_controller.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":64.0,"y":-32.0,},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"DecorationFront","instances":[],"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Explosions","instances":[],"visible":true,"depth":200,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
@@ -36,6 +37,7 @@
   "instanceCreationOrder": [
     {"name":"inst_5F61F2C6","path":"rooms/rm_race/rm_race.yy",},
     {"name":"inst_5E526BC4","path":"rooms/rm_race/rm_race.yy",},
+    {"name":"inst_1A33B5B2","path":"rooms/rm_race/rm_race.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
