@@ -1,6 +1,18 @@
 var dt = 1 / 60;
 
 timer += dt;
+timer_drop += dt;
+if (timer_drop > 0.6) {
+	timer_drop = 100;
+	image_alpha = 1;
+	image_xscale = 1;
+	image_yscale = 1;
+} else {
+	var lt = timer_drop / 0.6;
+	image_alpha = lerp(0, 1, lt);
+	image_xscale = 1 / lt;
+	image_yscale = 1 / lt;
+}
 
 var target_y = mouse_y;
 var t = timer / 10;
