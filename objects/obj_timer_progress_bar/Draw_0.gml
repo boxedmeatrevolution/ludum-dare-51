@@ -1,9 +1,16 @@
 if (obj_controller.race_index != 1) {
-	start_pos = -670;
-	end_pos = -10;
-	percent_progress = 1 - obj_scavenge_timer.timer / obj_scavenge_timer.max_timer;
-	current_pos = lerp(start_pos, end_pos, percent_progress);
+	var start_pos = -670;
+	var end_pos = -10;
+	var percent_progress = 1 - obj_scavenge_timer.timer / obj_scavenge_timer.max_timer;
+	var current_pos = lerp(start_pos, end_pos, percent_progress);
 
+	var no_active_scavenge = !obj_controller.scavenge_active[0] 
+                      && !obj_controller.scavenge_active[1] 
+                      && !obj_controller.scavenge_active[2];
+    if (no_active_scavenge) {
+		current_pos = end_pos;
+	}
+					  
 	if (!surface_exists(clip_surface)) {
 		clip_surface = surface_create(32, 685);
 	}
