@@ -8,9 +8,9 @@ var no_active_scavenge = !obj_controller.scavenge_active[0]
 // Countdown
 if (is_countdown) {
 	if (obj_controller.race_index <= 2) {
-		timer -= 0.5 * dt;
-	} else {
 		timer -= 0.7 * dt;
+	} else {
+		timer -= 1 * dt;
 	}
 }
 
