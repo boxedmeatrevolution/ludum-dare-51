@@ -13,11 +13,10 @@ hitbox.damage = 1;
 for (var i = 0; i < 5; ++i) {
 	vel_min = 50;
 	vel_max = 200;
-	
-	var baby1 = instance_create_layer(x, y, "Asteroids", obj_asteroid);
-	asteroid_set_type(baby1, AsteroidType.Metal);
 	var dir = random(360);
 	var vel = random_range(vel_min, vel_max);
+	var baby1 = instance_create_layer(x + 45 * dcos(dir), y + 45 * dsin(dir), "Asteroids", obj_asteroid);
+	asteroid_set_type(baby1, AsteroidType.Metal);
 	baby1.vel_x = vel * dcos(dir);
 	baby1.vel_y = vel * dsin(dir);
 }
