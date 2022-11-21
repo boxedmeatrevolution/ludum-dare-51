@@ -5,4 +5,4 @@ for (var i = 0; i < array_length(hit); ++i) {
 }
 array_push(hit, other);
 
-other.hp -= 1;
+other.hp -= damage;

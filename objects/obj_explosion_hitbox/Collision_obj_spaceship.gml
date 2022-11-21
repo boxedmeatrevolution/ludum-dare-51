@@ -12,7 +12,7 @@ other.vel_x = 30 * delta_x / distance;
 other.vel_y = 30 * delta_y / distance;
 other.vel_dir += random_range(-20, 20);
 	
-other.hp -= 1
+other.hp -= damage;
 other.active = false;
 other.active_timer = other.active_timer_max;
 	
