@@ -1,6 +1,6 @@
 var dt = 1 / 60;
 
-var is_countdown = obj_controller.race_index != 1 && obj_button_scavenge.clicked
+var is_countdown = obj_controller.race_index != 1 && obj_button_scavenge.clicked;
 var no_active_scavenge = !obj_controller.scavenge_active[0] 
                       && !obj_controller.scavenge_active[1] 
                       && !obj_controller.scavenge_active[2];
@@ -41,14 +41,20 @@ else if (is_hovered || !is_countdown) {
 else if (is_countdown) {
 	// Show countdown
 	sprite_index = spr_scavenge_timer;
-	image_index = floor(timer);
+	image_index = floor(timer % 11);
+	if (timer < 22) {
+		if (obj_controller.scavenge_active[0]) {
+			obj_controller.scavenge_active[0] = false;
+		}
+	}
+	if (timer < 11) {
+		if (obj_controller.scavenge_active[1]) {
+			obj_controller.scavenge_active[1] = false;
+		}
+	}
 	if (timer < 0) {
-		timer = 11;
-		for (var i = 0; i < 3; ++i) {
-			if (obj_controller.scavenge_active[i]) {
-				obj_controller.scavenge_active[i] = false;
-				break;
-			}
+		if (obj_controller.scavenge_active[2]) {
+			obj_controller.scavenge_active[2] = false;
 		}
 	}
 }
